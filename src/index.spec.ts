@@ -1,12 +1,41 @@
-// @ts-ignore see https://github.com/jest-community/jest-extended#setup
-import * as matchers from "jest-extended";
+import { solution } from ".";
 
-expect.extend(matchers);
-
-test("That's a test!", () => {
-  expect(1 + 1).toEqual(2);
+test("1", () => {
+  expect(solution(0, 1)).toEqual(100);
 });
 
-test("jest-extended is included", () => {
-  expect([1, 0]).toIncludeSameMembers([0, 1]);
+test(" 2", () => {
+  expect(solution(0, 2)).toEqual(200);
+});
+
+test(" 3", () => {
+  expect(solution(100, 1)).toEqual(200);
+});
+
+test(" 4", () => {
+  expect(solution(200, 1)).toEqual(300);
+});
+
+test(" 5", () => {
+  expect(solution(900, 1)).toEqual(910);
+});
+
+test(" 6", () => {
+  expect(solution(800, 2)).toEqual(910);
+});
+
+test(" 7", () => {
+  expect(solution(110, 1)).toEqual(210);
+});
+
+test(" 8", () => {
+  expect(solution(810, 2)).toEqual(920);
+});
+
+test(" 9", () => {
+  expect(solution(980, 2)).toEqual(991);
+});
+
+test(" 10", () => {
+  expect(solution(990, 2)).toEqual(992);
 });
